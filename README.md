@@ -19,6 +19,12 @@ The approach taken was to use a single neural network architecture and compare t
 
 The same neural network was trained using four different vector representations for the questions as input. 
 
-The results are summarized in this graph showing cross-validated loss vs training epoch: 
+The results are summarized in this graph showing cross-validated accuracy vs training epoch: 
 
 ![alt tag](images/val_acc.png)
+
+and this similar graph showing cross-validated loss vs training epoch: 
+
+![alt tag](images/val_loss.png)
+
+
