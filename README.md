@@ -27,8 +27,37 @@ and this similar graph showing cross-validated loss vs training epoch:
 
 ![alt tag](images/val_loss.png)
 
+Overall the four models perform within a percentage point or so of each other, though at the state-of-the-art these percentage points can matter. (To be clear, the results shown here are by no means state-of-the-art!)
+
 We see that somewhat surprisingly, the doc2vec model performs the worst of the four - this may be because the doc2vec model implicitly must use word2vec vectors trained on the training data, and the Quora duplicate question data set may not be large or general enough to get reliable word vectors trained. 
 
-The skip-gram word2vec model performs about as well as the pre-trained Google News vectors. The Google News result is most interesting because the Google News vectors are entirely pretrained from ~30 GB of Google News data - the training didn't involved a question task at all. This suggests that for a data set of this size (~400,000 sentences) well-formed word vectors are more important that the domain-specificity that may be gained by training the word vectors on the specific data being used in the task. 
+The two best-performing vector representations for this task were <b>skip-gram word2vec</b> and <b>Google News</b>. The Google News result is most interesting because the Google News vectors are entirely pretrained from ~30 GB of Google News data - the training didn't involved a question task at all. This suggests that for a data set of this size (~400,000 sentences) well-formed word vectors are more important that the domain-specificity that may be gained by training the word vectors on the specific data being used in the task. Based on these results, for this task the skip-gram word2vec appraoch works better than the cbow appraoch (see original word2vec paper: https://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf and others: https://blog.acolyer.org/2016/04/21/the-amazing-power-of-word-vectors/)
 
 The graphs above also suggest more clarity may be gained by training the neural network for more epochs - there is a hint that the accuracy may continue to rise for some of the models. 
+
+### Summary of classifier evaluation metrics for each vector representation
+
+#### Doc2vec model:
+Accuracy: 0.7966
+Precision: 0.717
+Recall: 0.7408
+F1: 0.7287
+
+#### Doc2vec word-average model:
+Accuracy: 0.8056
+Precision: 0.7487
+Recall: 0.7115
+F1: 0.7296
+
+#### Skip-gram Word2vec model:
+Accuracy: 0.8106
+Precision: 0.7364
+Recall: 0.7573
+F1: 0.7467
+
+#### Google News model:
+Accuracy: 0.8106
+Precision: 0.7347
+Recall: 0.7613
+F1: 0.7478
+
