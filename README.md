@@ -38,26 +38,26 @@ The graphs above also suggest more clarity may be gained by training the neural 
 ### Summary of classifier evaluation metrics for each vector representation
 
 #### Doc2vec model:
-Accuracy: 0.7966
-Precision: 0.717
-Recall: 0.7408
-F1: 0.7287
+Accuracy: 0.7966 <br />
+Precision: 0.717 <br />
+Recall: 0.7408 <br />
+F1: 0.7287 <br />
 
 #### Doc2vec word-average model:
-Accuracy: 0.8056
-Precision: 0.7487
-Recall: 0.7115
-F1: 0.7296
+Accuracy: 0.8056 <br />
+Precision: 0.7487 <br />
+Recall: 0.7115 <br />
+F1: 0.7296 <br />
 
 #### Skip-gram Word2vec model:
-Accuracy: 0.8106
-Precision: 0.7364
-Recall: 0.7573
-F1: 0.7467
+Accuracy: 0.8106 <br />
+Precision: 0.7364 <br />
+Recall: 0.7573 <br />
+F1: 0.7467 <br />
 
 #### Google News model:
-Accuracy: 0.8106
-Precision: 0.7347
-Recall: 0.7613
-F1: 0.7478
+Accuracy: 0.8106 <br />
+Precision: 0.7347 <br />
+Recall: 0.7613 <br />
+F1: 0.7478 <br />
 
