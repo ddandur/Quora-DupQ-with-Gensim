@@ -9,9 +9,17 @@ The task in this dataset is to determine whether a pair of questions are duplica
 
 Dependencies: pandas, sklearn, numpy, matplotlib
 
-This notebook is a simple exploration of the dataset and shows the first steps one might take when looking at new data (which include literally looking at data, checking for null values, cleaning data, etc). The notebook also shows a little machine learning with tf-idf vectors, though the second notebook is heavier on the machine learning.
+This notebook is a simple exploration of the dataset and shows the first steps one might take when looking at new data (which include literally looking at data, checking for null values, cleaning data, etc). 
 
-This shows the process of looking at the data, but it is not intended to be a stand-alone notebook for exploration - see next notebook for that.
+The notebook also explores the idea of using vectors to represent each question, with tf-idf vectors for 1-grams and 2-grams as well as word2vec vectors trained on either the questions alone or on Google News being used. To determine whether two questions are duplicates we take the cosine distance between their question vectors, with higher values interpreted as higher likelihood of being duplicates. The ROC AUC scores for these "cosine classifiers" are summarized below. We find that when using cosine similarity and evaluating with ROC AUC, <b>TF-IDF 1-grams</b> perform best.
+
+### Summary of ROC AUC scores for cosine-similarity question vector classifiers
+
+TF-IDF 1-grams:       0.7349
+TF-IDF 2-grams:       0.7268
+questions word2vec:   0.6964
+Google News word2vec: 0.7259
+
 
 ## Quora Duplicate Questions with Word2vec and Keras
 
