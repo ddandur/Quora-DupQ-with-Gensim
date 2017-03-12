@@ -11,11 +11,13 @@ Dependencies: pandas, sklearn, numpy, matplotlib
 
 This notebook is a simple exploration of the dataset and shows the first steps one might take when looking at new data (which include literally looking at data, checking for null values, cleaning data, etc). The notebook also shows a little machine learning with tf-idf vectors, though the second notebook is heavier on the machine learning.
 
+This shows the process of looking at the data, but it is not intended to be a stand-alone notebook for exploration - see next notebook for that.
+
 ## Quora Duplicate Questions with Word2vec and Keras
 
 Dependencies: pandas, sklearn, numpy, matplotlib, gensim, keras, 
 
-This notebook uses word and document vectors to represent the questions, then puts these vector representations into a neural network for the classification task. The notebook is almost totally self-contained, i.e. its cells can be run in succession and they will automatically download the required data, clean it, and do machine learning. (This notebook makes reference to the quora_dup_utils.py file for helper functions.) Two two main parameters user would probably want to change are the location of the Google News pre-computed doc vectors (google_model_path variable) and the number of question pairs to use in analysis (num_question_pairs). 
+This notebook uses word and document vectors to represent the questions, then puts these vector representations into a neural network for the classification task. The notebook is almost totally self-contained, i.e. its cells can be run in succession and they will automatically download the required data, clean it, and do machine learning. (This notebook makes reference to the quora_dup_utils.py file for helper functions.) Two two main parameters a user would probably want to change are the location of the Google News pre-computed doc vectors (google_model_path variable) and the number of question pairs to use in analysis (num_question_pairs). The Google News binary file of pre-computed doc vectors is large so it is not included in this repo.
 
 The approach taken was to use a single neural network architecture and compare the results between four different types of question vector representations. The network architecture was chosen using cross validation on a small subset of the data using doc2vec vectors - its definition can be found in the notebook. Keras makes it very easy to experiment with other architectures and it is likely better models can be found. 
 
