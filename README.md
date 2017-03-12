@@ -15,10 +15,10 @@ The notebook also explores the idea of using vectors to represent each question,
 
 ### Summary of ROC AUC scores for cosine-similarity question vector classifiers
 
-TF-IDF 1-grams:       0.7349
-TF-IDF 2-grams:       0.7268
-questions word2vec:   0.6964
-Google News word2vec: 0.7259
+TF-IDF 1-grams:       0.7349 <br />
+TF-IDF 2-grams:       0.7268 <br />
+questions word2vec:   0.6964 <br />
+Google News word2vec: 0.7259 <br />
 
 
 ## Quora Duplicate Questions with Word2vec and Keras
