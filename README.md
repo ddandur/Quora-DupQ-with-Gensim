@@ -7,9 +7,13 @@ The task in this dataset is to determine whether a pair of questions are duplica
 
 ## Quora Questions - Bag-of-Words and Word2Vec Averaging
 
+Dependencies: pandas, sklearn, numpy, matplotlib
+
 This notebook is a simple exploration of the dataset and shows the first steps one might take when looking at new data (which include literally looking at data, checking for null values, cleaning data, etc). The notebook also shows a little machine learning with tf-idf vectors, though the second notebook is heavier on the machine learning.
 
 ## Quora Duplicate Questions with Word2vec and Keras
+
+Dependencies: pandas, sklearn, numpy, matplotlib, gensim, keras, 
 
 This notebook uses word and document vectors to represent the questions, then puts these vector representations into a neural network for the classification task. The notebook is almost totally self-contained, i.e. its cells can be run in succession and they will automatically download the required data, clean it, and do machine learning. (This notebook makes reference to the quora_dup_utils.py file for helper functions.) Two two main parameters user would probably want to change are the location of the Google News pre-computed doc vectors (google_model_path variable) and the number of question pairs to use in analysis (num_question_pairs). 
 
