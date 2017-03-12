@@ -15,7 +15,7 @@ The notebook also explores the idea of using vectors to represent each question,
 
 ### Summary of ROC AUC scores for cosine-similarity question vector classifiers
 
-TF-IDF 1-grams: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.7349 <br />
+TF-IDF 1-grams: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.7349 <br />
 TF-IDF 2-grams: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.7268 <br />
 questions word2vec: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.6964 <br />
 Google News word2vec: 0.7259 <br />
